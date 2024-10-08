@@ -168,5 +168,263 @@ OUTPUT :
 
 ![image](https://github.com/user-attachments/assets/8d6fedc3-74e3-4632-b9e2-77d7eef17b10)
 
+# CODE PERFORMED DURING WORKSHOP :
+SELECTION SORT CODE 1 :
+```
+// selection sort 
+// arranging number in an array in increasing order of their precedance 
 
+// Name --> Aditya Agarwal
+// PRN --> 23070123162
 
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    int arr[5] = {23, 12, 56, 144, 78};
+    int n = 5;
+
+    // Selection sort 
+    for (int i = 0; i < n - 1; i++) {
+        int min_index = i;  // Assume the minimum is the first element of the unsorted array
+        for (int j = i + 1; j < n; j++) {
+            if (arr[j] < arr[min_index]) {
+                min_index = j;  // Update the index of the minimum element
+            }
+        }
+        // Swap the found minimum element with the first element
+        if (i != min_index) {
+            swap(arr[i], arr[min_index]);
+        }
+    }
+
+    // Output the sorted array
+    cout << "The sorted array will be: ";
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;  // Adding a new line for better output
+    return 0;
+}
+
+```
+OUTPUT :
+![image](https://github.com/user-attachments/assets/fdfae7cb-b182-487b-b721-b4da3ae9628e)
+
+SELECTION SORT CODE 2 : 
+```
+// using selection sort such that code sorts number in the decreasing order of their precedance 
+
+// Name --> Aditya Agarwal
+// PRN --> 23070123162
+
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    int arr[5] = {23, 12, 56, 144, 78};
+    int n = 5;
+
+    // Selection sort 
+    for (int i = 0; i < n - 1; i++) {
+        int max_index = i;  // Assume the minimum is the first element of the unsorted array
+        for (int j = i + 1; j < n; j++) {
+            if (arr[j] > arr[max_index]) {
+                max_index = j;  // Update the index of the minimum element
+            }
+        }
+        // Swap the found minimum element with the first element
+        if (i != max_index) {
+            swap(arr[i], arr[max_index]);
+        }
+    }
+
+    // Output the sorted array
+    cout << "The sorted array will be: ";
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;  // Adding a new line for better output
+    return 0;
+}
+
+```
+OUTPUT :
+![image](https://github.com/user-attachments/assets/fcfd0557-fdee-4478-a873-92e0ea7882da)
+
+INSERTION SORT :
+```
+// INSERTION SORT 
+
+// Name --> Aditya Agarwal
+// PRN --> 23070123162
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[5] = {45, 23, 86, 12, 9};
+    int n = 5;
+
+    // Insertion sort
+    for (int i = 1; i < n; i++) {
+        int current = arr[i];  // the current element to be inserted
+        int j = i - 1;  // Use j to track the position where current will be inserted
+
+        // shifting elements of arr[0...i-1], that are greater than current
+        // to one position ahead of their current position
+        while (j >= 0 && arr[j] > current) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = current;  // Insert the current element at its correct position
+    }
+
+    // Output the sorted array
+    cout << "The sorted array will be: ";
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;  // Add a newline for better output formatting
+    return 0;
+}
+
+```
+OUTPUT :
+![image](https://github.com/user-attachments/assets/39ecd83d-94c4-41f0-b103-c3e72c1e6dff)
+
+BUBBLE SORT CODE 1 :
+```
+// bubble sort code which sorts number in increasing order of their value 
+
+# include <iostream>
+# include <algorithm>
+using namespace std;
+
+int main(){
+    int arr[5] = {23,12,56,144,78};
+    int n = 5;
+
+    // Bubble sort 
+    for (int i = 0;i<n-1;i++){
+        for (int j = 0;j<n-1;j++){
+            if(arr[j]>arr[j+1]){
+                swap(arr[j],arr[j+1]);
+            }
+        }
+    }
+
+    cout << "The sorted array will be : ";
+    for(int i = 0;i<n;i++){
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+    return 0;
+}
+```
+OUTPUT :
+![image](https://github.com/user-attachments/assets/64cfb7d4-b92f-4fae-aaf0-4920bf8d6d30)
+
+CODE FOR BUBBLE SORT :
+CODE (a)
+```
+// bubble sort code which sorts number in increasing order of their value 
+
+# include <iostream>
+# include <algorithm>
+using namespace std;
+
+int main(){
+    int arr[5] = {23,12,56,144,78};
+    int n = 5;
+
+    // Bubble sort 
+    for (int i = 0;i<n-1;i++){
+        for (int j = 0;j<n-1;j++){
+            if(arr[j]>arr[j+1]){
+                swap(arr[j],arr[j+1]);
+            }
+        }
+    }
+
+    cout << "The sorted array will be : ";
+    for(int i = 0;i<n;i++){
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+    return 0;
+}
+
+```
+OUTPUT :
+![image](https://github.com/user-attachments/assets/8a291f14-417d-4537-96f5-2a0b09b5631b)
+
+CODE (B)
+```
+// bubble sort code which sort code in the decresing order of their value 
+
+# include <iostream>
+# include <algorithm>
+using namespace std;
+
+int main(){
+    int arr[5] = {23,12,56,144,78};
+    int n = 5;
+
+    // Bubble sort 
+    for (int i = 0;i<n-1;i++){
+        for (int j = 0;j>n-1;j++){
+            if(arr[j]>arr[j+1]){
+                swap(arr[j],arr[j+1]);
+            }
+        }
+    }
+
+    cout << "The sorted array will be : ";
+    for(int i = 0;i<n;i++){
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+    return 0;
+}
+```
+OUTPUT :
+![image](https://github.com/user-attachments/assets/77d06159-b6c6-478c-b691-f56eaf971648)
+
+CODE (C)
+```
+// [76,89,321,65,132,34] sort the array using bubble sort 
+
+# include <iostream>
+# include <algorithm>
+using namespace std;
+
+int main(){
+    int arr[6] = {76,89,321,65,132,34};
+    int n = 5;
+
+    // Bubble sort 
+    for (int i = 0;i<n-1;i++){
+        for (int j = 0;j<n-1;j++){
+            if(arr[j]>arr[j+1]){
+                swap(arr[j],arr[j+1]);
+            }
+        }
+    }
+
+    cout << "The sorted array will be : ";
+    for(int i = 0;i<n;i++){
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+    return 0;
+}
+
+```
+OUTPUT :
+![image](https://github.com/user-attachments/assets/1f252812-0556-4eeb-a45b-2a4643cb73e7)
+
+CONCLUSION :
+We have learned and implemented sorting of array and its types in C++ .
